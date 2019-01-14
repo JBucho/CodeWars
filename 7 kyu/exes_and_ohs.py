@@ -21,5 +21,5 @@ def xo(s):
 
 
 if __name__ == "__main__":
-    text = "oaxgoxhxooxweooxXm"
+    text = "oaxgoxhoxooxxweooxXm"
     print(xo(text))
