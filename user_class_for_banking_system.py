@@ -69,7 +69,7 @@ class User(object):
 
 
 if __name__ == "__main__":
-    Jeff = User('Jeff', 70, True)
+    Jeff = User('Jeff', 80, True)
     Joe = User('Joe', 70, True)
 
     print(Joe.check(Jeff, 50))
