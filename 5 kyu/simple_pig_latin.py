@@ -5,12 +5,12 @@ to the end of the word. Leave punctuation marks untouched."""
 def pig_it(latin):
     latin = latin.split(' ')
     pig_latin = []
-    for w in latin:
-        if w.isalpha():
-            pig_word = w[1:] + w[0] + 'ay'
+    for word in latin:
+        if word.isalpha():
+            pig_word = word[1:] + word[0] + 'ay'
             pig_latin.append(pig_word)
         else:
-            pig_latin.append(w)
+            pig_latin.append(word)
     return ' '.join(pig_latin)
 
 
