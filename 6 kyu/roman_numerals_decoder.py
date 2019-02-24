@@ -17,7 +17,7 @@ from functools import reduce
 
 
 def solution(roman):
-    dict = {
+    roman_dict = {
         "M": 1000,
         "D": 500,
         "C": 100,
@@ -26,7 +26,7 @@ def solution(roman):
         "V": 5,
         "I": 1,
     }
-    return reduce(lambda x, y: x - y if x >= 5 * y else x + y, list(dict[c] for c in roman[::-1]))
+    return reduce(lambda x, y: x - y if x >= 5 * y else x + y, list(roman_dict[c] for c in roman[::-1]))
 
 
 print(solution('MCDXLIV'))
