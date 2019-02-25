@@ -13,7 +13,7 @@ def is_pangram(s):
     """
     Checks if given string is a pangram.
     :param s: string
-    :return: boolean => True if given string is a pangram, False if it is not a pangram.
+    :return: bool => True if given string is a pangram, False if it is not a pangram.
     """
     return True if all(letter in s.lower() for letter in string.ascii_lowercase) else False
 
