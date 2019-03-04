@@ -15,7 +15,7 @@ def is_pangram(s):
     :param s: string
     :return: bool => True if given string is a pangram, False if it is not a pangram.
     """
-    return True if all(letter in s.lower() for letter in string.ascii_lowercase) else False
+    return all(letter in s.lower() for letter in string.ascii_lowercase)
 
 
 def is_pangram2(s):
@@ -29,9 +29,9 @@ def is_pangram2(s):
 
 if __name__ == "__main__":
 
-    pangram = "Pack my box with five dozen liquor jugs."
-    pangram2 = "The quick brown fo. jumps, over the lazy dog!"
-    pangram3 = "The quick brown fox jumps over the lazy dog"
+    pangram = "Pack my box with five dozen liquor jugs."  # a pangram
+    pangram2 = "The quick brown... jumps, over the lazy dog!"  # not a pangram
+    pangram3 = "The quick brown fox jumps over the lazy dog"  # a pangram
 
     print(is_pangram(pangram))
     print(is_pangram2(pangram))
