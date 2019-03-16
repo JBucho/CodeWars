@@ -10,18 +10,7 @@ Your function will return the index 3, because at the 3rd position of the array,
 the sum of left side of the index ({1,2,3}) and the sum of the right side of the
 index ({3,2,1}) both equal 6.
 
-Let's look at another one.
-You are given the array {1,100,50,-51,1,1}:
-Your function will return the index 1, because at the 1st position of the array,
-the sum of left side of the index ({1}) and the sum of the right side of the
-index ({50,-51,1,1}) both equal 1.
-
-Last one:
-You are given the array {20,10,-80,10,10,15,35}
-At index 0 the left side is {}
-The right side is {10,-80,10,10,15,35}
-They both are equal to 0 when added. (Empty arrays are equal to 0 in this problem)
-Index 0 is the place where the left side and right side are equal.
+...
 
 Note: Please remember that in most programming/scripting languages the index of an array starts at 0.
 
@@ -38,17 +27,19 @@ An empty array should be treated like a 0 in this problem."""
 
 
 def find_even_index(arr):
-    """Return an array index where the sum of the integers to the left of that
-    index is equal to the sum of the integers to the right.
-
-    Return '-1' if no index with left and right side equality
-
-    arguments:
-    arr -- given array of integers
     """
+    Return an array index where the sum of the integers to the left of that
+    index is equal to the sum of the integers to the right. Return '-1' if
+    no index with left and right side equality.
+
+    :param arr: list -> list of numbers
+    :return: int -> list index
+    """
+
     for i in range(len(arr)):
         if sum(arr[:i]) == sum(arr[i + 1:]):
             return i
+
     return -1
 
 

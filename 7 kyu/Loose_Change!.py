@@ -29,14 +29,17 @@ from decimal import *
 def change_count(change):
     getcontext().prec = 2
     change_value = 0.00
+
     for coin in change.split():
         change_value += CHANGE[coin]
     change_total = Decimal(change_value)
+
     return '$' + str(format(change_total, '2.2f'))
 
 
 def change_count2(change):
     total = sum(CHANGE[coin] for coin in change.split())
+
     return '$' + str(format(total, '2.2f'))
 
 
@@ -46,7 +49,6 @@ CHANGE = {'penny': 0.01,
           'quarter': 0.25,
           'dollar': 1.00
           }
-
 
 print(change_count('dollar dollar dollar dollar dollar dollar dollar dollar dollar dollar penny'))
 print(change_count2('dollar dollar dollar dollar dollar dollar dollar dollar dollar dollar penny'))

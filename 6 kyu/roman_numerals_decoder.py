@@ -29,6 +29,7 @@ def solution(roman):
     return reduce(lambda x, y: x - y if x >= 5 * y else x + y, list(roman_dict[c] for c in roman[::-1]))
 
 
-print(solution('MCDXLIV'))
-print(solution('MDCLXVI'))
-print(solution('MCMXC'))
+if __name__ == '__main__':
+    print(solution('MCDXLIV'))
+    print(solution('MDCLXVI'))
+    print(solution('MCMXC'))

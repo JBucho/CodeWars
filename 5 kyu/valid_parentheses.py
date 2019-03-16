@@ -23,8 +23,8 @@ def valid_parentheses(string):
     :param string: string
     :return: bool
     """
-    parentheses = {'(': ')'}
 
+    parentheses = {'(': ')'}
     check_list = []
 
     for char in string:
@@ -34,7 +34,9 @@ def valid_parentheses(string):
             check_list.append(parentheses[char])
         elif not check_list or char != check_list.pop():
             return False
+
     return not check_list
 
 
-print(valid_parentheses("zo(ruhlhr(du)stshn((jbw(am)az)d(tqxvmvhnbl)"))
+if __name__ == '__main__':
+    print(valid_parentheses("zo(ruhlhr(du)stshn((jbw(am)az)d(tqxvmvhnbl)"))

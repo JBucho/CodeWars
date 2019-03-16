@@ -11,6 +11,7 @@ import string
 
 def longest(s1, s2):
     el = [i for i in string.ascii_lowercase if i in s1 or i in s2]
+
     return ''.join(el)
 
 

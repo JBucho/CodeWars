@@ -15,6 +15,7 @@ iq_test("1 2 1 1") => 2 // Second number is even, while the rest of the numbers 
 
 def iq_test(numbers):
     numbers = numbers.split(' ')
+
     for i in range(0, len(numbers)):
         if int(numbers[i]) % 2 != int(numbers[i - 1]) % 2 and int(numbers[i]) % 2 != int(numbers[i - 2]) % 2:
             return i + 1
